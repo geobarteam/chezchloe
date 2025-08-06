@@ -1,17 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Chloé - Massage & Bien-être | Zaventem</title>
+  <meta name="description" content="Découvrez Chloé, artiste du massage à Zaventem. Expérience personnalisée de bien-être et sensualité dans un environnement respectueux et accueillant.">
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
+    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+    <button class="lang-btn" onclick="setLanguage('nl')">NL</button>
+  </div>
+
+  <!-- Header -->
+  <header class="hero">
+    <div class="tantra-symbols">
+      <div class="symbol symbol-1">🕉️</div>
+      <div class="symbol symbol-2">🌸</div>
+      <div class="symbol symbol-3">🔥</div>
+      <div class="symbol symbol-4">💫</div>
+    </div>
+    <div class="hero-content">
+      <div class="logo-container">
+        <div class="logo">
+          <div class="lotus-symbol">🪷</div>
+          <div class="logo-text">
+            <h1 class="hero-title" data-fr="Chloé" data-en="Chloé" data-nl="Chloé">Chloé</h1>
+            <div class="logo-subtitle" data-fr="Salon de Massage Tantra" data-en="Tantra Massage Salon" data-nl="Tantra Massage Salon">Salon de Massage Tantra</div>
+          </div>
+        </div>
+      </div>
+      <p class="hero-subtitle" data-fr="Artiste du Massage & Bien-être" data-en="Massage Artist & Wellness" data-nl="Massage Kunstenaar & Wellness">Artiste du Massage & Bien-être</p>
+      <p class="hero-location" data-fr="Zaventem, Belgique" data-en="Zaventem, Belgium" data-nl="Zaventem, België">Zaventem, Belgique</p>
+      <div class="hero-elements">
+        <div class="element element-1">✨</div>
+        <div class="element element-2">🌿</div>
+        <div class="element element-3">💆‍♀️</div>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#about" data-fr="À propos" data-en="About" data-nl="Over mij">À propos</a></li>
+      <li><a href="#gallery" data-fr="Galerie" data-en="Gallery" data-nl="Galerij">Galerie</a></li>
+      <li><a href="#services" data-fr="Services" data-en="Services" data-nl="Diensten">Services</a></li>
+      <li><a href="#hours" data-fr="Horaires" data-en="Hours" data-nl="Openingstijden">Horaires</a></li>
+      <li><a href="#contact" data-fr="Contact" data-en="Contact" data-nl="Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <div class="section-icon">🪷</div>
+        <h2 data-fr="À propos de Chloé" data-en="About Chloé" data-nl="Over Chloé">À propos de Chloé</h2>
+        <div class="warm-elements">
+          <span class="warm-element">🌸</span>
+          <span class="warm-element">💫</span>
+          <span class="warm-element">🌸</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="profile-info">
+          <div class="profile-details">
+            <div class="quote-symbol">"</div>
+            <p data-fr="Rencontrez Chloé, une artiste du massage, alliant charme et compétence. Dès le premier contact, son aura bienveillante crée un espace accueillant où la diversité est honorée."
+               data-en="Meet Chloé, a massage artist combining charm and skill. From the first contact, her benevolent aura creates a welcoming space where diversity is honored."
+               data-nl="Ontmoet Chloé, een massage kunstenaar die charme en vaardigheid combineert. Vanaf het eerste contact creëert haar welwillende aura een gastvrije ruimte waar diversiteit wordt geëerd.">
+               Rencontrez Chloé, une artiste du massage, alliant charme et compétence. Dès le premier contact, son aura bienveillante crée un espace accueillant où la diversité est honorée.
+            </p>
+            
+            <p data-fr="Plongez dans une expérience personnalisée où les mains expertes de Chloé, une femme remarquable, vous guideront à travers une symphonie de sensations. Sa présence chaleureuse établit une confiance profonde, permettant à chacun de se libérer des tensions et de se connecter avec sa véritable essence."
+               data-en="Dive into a personalized experience where Chloé's expert hands, a remarkable woman, will guide you through a symphony of sensations. Her warm presence establishes deep trust, allowing everyone to release tensions and connect with their true essence."
+               data-nl="Duik in een persoonlijke ervaring waarbij Chloé's ervaren handen, een opmerkelijke vrouw, je door een symfonie van sensaties zal leiden. Haar warme aanwezigheid schept diep vertrouwen, waardoor iedereen spanning kan loslaten en verbinding kan maken met hun ware essentie.">
+               Plongez dans une expérience personnalisée où les mains expertes de Chloé, une femme remarquable, vous guideront à travers une symphonie de sensations. Sa présence chaleureuse établit une confiance profonde, permettant à chacun de se libérer des tensions et de se connecter avec sa véritable essence.
+            </p>
+            <div class="tantra-quote">
+              <div class="quote-icon">🕉️</div>
+              <p data-fr="L'art du massage tantra réside dans l'harmonie entre le corps et l'esprit"
+                 data-en="The art of tantra massage lies in the harmony between body and mind"
+                 data-nl="De kunst van tantra massage ligt in de harmonie tussen lichaam en geest">
+                 L'art du massage tantra réside dans l'harmonie entre le corps et l'esprit
+              </p>
+            </div>
+          </div>
+          
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-label" data-fr="Âge" data-en="Age" data-nl="Leeftijd">Âge</span>
+              <span class="stat-value">34 ans</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label" data-fr="Langues" data-en="Languages" data-nl="Talen">Langues</span>
+              <span class="stat-value">Français</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label" data-fr="Nationalité" data-en="Nationality" data-nl="Nationaliteit">Nationalité</span>
+              <span class="stat-value" data-fr="Belge" data-en="Belgian" data-nl="Belgisch">Belge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+      <div class="section-header">
+        <div class="section-icon">📸</div>
+        <h2 data-fr="Galerie" data-en="Gallery" data-nl="Galerij">Galerie</h2>
+        <div class="warm-elements">
+          <span class="warm-element">💫</span>
+          <span class="warm-element">🌸</span>
+          <span class="warm-element">💫</span>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img src="Pictures/chloe-20231226183124.avif" alt="Chloé" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="Pictures/chloe-20231226183129.avif" alt="Chloé" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="Pictures/chloe-20231226183127.avif" alt="Chloé" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="Pictures/chloe-20231226183126.avif" alt="Chloé" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="Pictures/chloe-20231226183125.avif" alt="Chloé" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="Pictures/chloe-20231226183123.avif" alt="Chloé" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
+          </div>
+          <div class="carousel-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+            <button class="indicator" data-slide="3"></button>
+            <button class="indicator" data-slide="4"></button>
+            <button class="indicator" data-slide="5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="section-header">
+        <div class="section-icon">💆‍♀️</div>
+        <h2 data-fr="Services" data-en="Services" data-nl="Diensten">Services</h2>
+        <div class="warm-elements">
+          <span class="warm-element">🌿</span>
+          <span class="warm-element">✨</span>
+          <span class="warm-element">🌿</span>
+        </div>
+      </div>
+      <div class="services-content">
+        <div class="service-card">
+          <div class="service-icon">🪷</div>
+          <h3 data-fr="Massage Personnalisé" data-en="Personalized Massage" data-nl="Gepersonaliseerde Massage">Massage Personnalisé</h3>
+          <p data-fr="Chloé propose des séances sur mesure adaptées à vos besoins spécifiques. Son écoute attentive et son savoir-faire exceptionnel vous invitent à un voyage intérieur, où le bien-être et la sensualité s'entrelacent harmonieusement."
+             data-en="Chloé offers tailor-made sessions adapted to your specific needs. Her attentive listening and exceptional know-how invite you to an inner journey, where well-being and sensuality intertwine harmoniously."
+             data-nl="Chloé biedt op maat gemaakte sessies aangepast aan uw specifieke behoeften. Haar aandachtige luisterhouding en uitzonderlijke knowhow nodigen u uit voor een innerlijke reis, waar welzijn en sensualiteit harmonieus verweven zijn.">
+             Chloé propose des séances sur mesure adaptées à vos besoins spécifiques. Son écoute attentive et son savoir-faire exceptionnel vous invitent à un voyage intérieur, où le bien-être et la sensualité s'entrelacent harmonieusement.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <h3 data-fr="Massage Tantra" data-en="Tantra Massage" data-nl="Tantra Massage">Massage Tantra</h3>
+          <p data-fr="Découvrez l'art ancestral du massage tantra, une pratique sacrée qui éveille les sens et harmonise les énergies. Une expérience transformatrice qui vous reconnecte à votre essence profonde."
+             data-en="Discover the ancient art of tantra massage, a sacred practice that awakens the senses and harmonizes energies. A transformative experience that reconnects you to your deep essence."
+             data-nl="Ontdek de oude kunst van tantra massage, een heilige praktijk die de zintuigen wekt en energieën harmoniseert. Een transformerende ervaring die je herverbindt met je diepe essentie.">
+             Découvrez l'art ancestral du massage tantra, une pratique sacrée qui éveille les sens et harmonise les énergies. Une expérience transformatrice qui vous reconnecte à votre essence profonde.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🌸</div>
+          <h3 data-fr="Détente Profonde" data-en="Deep Relaxation" data-nl="Diepe Ontspanning">Détente Profonde</h3>
+          <p data-fr="Laissez-vous emporter dans une expérience de détente envoûtante et découvrez une connexion intime avec vous-même, sous les mains expertes de Chloé."
+             data-en="Let yourself be carried away in an enchanting relaxation experience and discover an intimate connection with yourself, under Chloé's expert hands."
+             data-nl="Laat jezelf meeslepen in een betoverende ontspanningservaring en ontdek een intieme verbinding met jezelf, onder Chloé's ervaren handen.">
+             Laissez-vous emporter dans une expérience de détente envoûtante et découvrez une connexion intime avec vous-même, sous les mains expertes de Chloé.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section id="hours" class="section">
+      <div class="section-header">
+        <h2 data-fr="Horaires" data-en="Opening Hours" data-nl="Openingstijden">Horaires</h2>
+      </div>
+      <div class="hours-content">
+        <div class="availability-card">
+          <h3 data-fr="Disponibilité" data-en="Availability" data-nl="Beschikbaarheid">Disponibilité</h3>
+          <p class="hours-info" data-fr="Disponible 24h/24, 7j/7" data-en="Available 24/7" data-nl="Beschikbaar 24/7">Disponible 24h/24, 7j/7</p>
+          <p class="appointment-note" data-fr="Sur rendez-vous uniquement" data-en="By appointment only" data-nl="Alleen op afspraak">Sur rendez-vous uniquement</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 data-fr="Contact" data-en="Contact" data-nl="Contact">Contact</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3 data-fr="Téléphone" data-en="Phone" data-nl="Telefoon">Téléphone</h3>
+            <a href="tel:+32474137118" class="phone-link">+32 474 13 71 18</a>
+          </div>
+          
+          <div class="contact-card">
+            <h3 data-fr="Localisation" data-en="Location" data-nl="Locatie">Localisation</h3>
+            <p class="location-info">Zaventem, Belgique</p>
+            <p class="region-info" data-fr="Brabant flamand" data-en="Flemish Brabant" data-nl="Vlaams-Brabant">Brabant flamand</p>
+          </div>
+        </div>
+        
+        <div class="contact-note">
+          <p data-fr="Merci de respecter les horaires de contact et de prendre rendez-vous à l'avance."
+             data-en="Please respect contact hours and make appointments in advance."
+             data-nl="Gelieve de contacttijden te respecteren en van tevoren een afspraak te maken.">
+             Merci de respecter les horaires de contact et de prendre rendez-vous à l'avance.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p data-fr="© 2025 Chloé - Massage & Bien-être. Site réservé aux adultes de plus de 18 ans."
+         data-en="© 2025 Chloé - Massage & Wellness. Adults only - 18+."
+         data-nl="© 2025 Chloé - Massage & Wellness. Alleen voor volwassenen 18+.">
+         © 2025 Chloé - Massage & Bien-être. Site réservé aux adultes de plus de 18 ans.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Language switching functionality
+    let currentLanguage = 'fr';
+    
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      
+      // Update language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`[onclick="setLanguage('${lang}')"]`).classList.add('active');
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+      
+      // Update all translatable elements
+      document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+        element.textContent = element.getAttribute('data-' + lang);
+      });
+      
+      // Store language preference
+      localStorage.setItem('preferredLanguage', lang);
+    }
+    
+    // Load saved language preference
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferredLanguage') || 'fr';
+      setLanguage(savedLang);
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+    
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const totalSlides = slides.length;
+    
+    function showSlide(index) {
+      // Remove active class from current slide and indicator
+      slides[currentSlide].classList.remove('active');
+      indicators[currentSlide].classList.remove('active');
+      
+      // Update current slide
+      currentSlide = (index + totalSlides) % totalSlides;
+      
+      // Add active class to new slide and indicator
+      slides[currentSlide].classList.add('active');
+      indicators[currentSlide].classList.add('active');
+      
+      // Move carousel track
+      const track = document.querySelector('.carousel-track');
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+    
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+    
+    // Event listeners for carousel
+    document.querySelector('.carousel-btn.next').addEventListener('click', nextSlide);
+    document.querySelector('.carousel-btn.prev').addEventListener('click', prevSlide);
+    
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto-play carousel
+    let autoPlay = setInterval(nextSlide, 5000);
+    
+    // Pause auto-play on hover
+    const carousel = document.querySelector('.carousel-container');
+    carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    carousel.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(nextSlide, 5000);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+  </script>
 </body>
 
 </html>
