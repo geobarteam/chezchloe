@@ -756,7 +756,7 @@ body::after {
 /* Services Section */
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2.5rem;
 }
 
@@ -774,7 +774,25 @@ body::after {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
+}
+
+.service-card.premium {
+  border-color: rgba(255, 183, 77, 0.3);
+}
+
+.service-card.luxury {
+  border-color: rgba(255, 215, 0, 0.4);
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(255, 215, 0, 0.1)),
+    rgba(0, 0, 0, 0.5);
+}
+
+.service-card.ultimate {
+  border-color: rgba(255, 20, 147, 0.4);
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 20, 147, 0.1)),
+    rgba(0, 0, 0, 0.6);
 }
 
 .service-card::before {
@@ -787,27 +805,12 @@ body::after {
   background: linear-gradient(90deg, #ffb74d, #ff8a65, #ffb74d);
 }
 
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  animation: service-float 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 15px rgba(255, 183, 77, 0.4));
+.service-card.luxury::before {
+  background: linear-gradient(90deg, #ffd700, #ffb347, #ffd700);
 }
 
-.service-card:nth-child(1) .service-icon { animation-delay: 0s; }
-.service-card:nth-child(2) .service-icon { animation-delay: 1.3s; }
-.service-card:nth-child(3) .service-icon { animation-delay: 2.6s; }
-
-@keyframes service-float {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg);
-    filter: drop-shadow(0 0 15px rgba(255, 183, 77, 0.4));
-  }
-  50% { 
-    transform: translateY(-10px) rotate(5deg);
-    filter: drop-shadow(0 0 25px rgba(255, 183, 77, 0.6));
-  }
+.service-card.ultimate::before {
+  background: linear-gradient(90deg, #ff1493, #ff69b4, #ff1493);
 }
 
 .service-card:hover {
@@ -819,26 +822,156 @@ body::after {
   border-color: rgba(255, 183, 77, 0.4);
 }
 
-.service-card:hover .service-icon {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 30px rgba(255, 183, 77, 0.8));
+.service-card.luxury:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+.service-card.ultimate:hover {
+  border-color: rgba(255, 20, 147, 0.6);
 }
 
 .service-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ffb74d;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(255, 183, 77, 0.3);
 }
 
+.service-card.luxury h3 {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.service-card.ultimate h3 {
+  color: #ff69b4;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
+}
+
+.service-subtitle {
+  font-style: italic;
+  color: rgba(255, 183, 77, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.service-card.luxury .service-subtitle {
+  color: rgba(255, 215, 0, 0.8);
+}
+
+.service-card.ultimate .service-subtitle {
+  color: rgba(255, 105, 180, 0.8);
+}
+
 .service-card p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
-  text-align: justify;
+  margin-bottom: 2rem;
   font-weight: 300;
+}
+
+/* Pricing Styles */
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pricing.single {
+  justify-content: center;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 183, 77, 0.2);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  min-width: 80px;
+  transition: all 0.3s ease;
+}
+
+.price-item:hover {
+  background: rgba(255, 183, 77, 0.1);
+  border-color: rgba(255, 183, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+.price-item.featured {
+  background: rgba(255, 183, 77, 0.15);
+  border-color: rgba(255, 183, 77, 0.4);
+  min-width: 120px;
+}
+
+.luxury .price-item {
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+.luxury .price-item:hover,
+.luxury .price-item.featured {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.ultimate .price-item {
+  border-color: rgba(255, 20, 147, 0.2);
+}
+
+.ultimate .price-item:hover,
+.ultimate .price-item.featured {
+  background: rgba(255, 20, 147, 0.1);
+  border-color: rgba(255, 20, 147, 0.4);
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.price {
+  font-size: 1.4rem;
+  color: #ffb74d;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 183, 77, 0.3);
+}
+
+.luxury .price {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.ultimate .price {
+  color: #ff69b4;
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.3);
+}
+
+/* Specific service image backgrounds */
+.premiere-caresse {
+  background-image: url('images/hero-tantra-couple.jpg');
+}
+
+.mysteres-tantra {
+  background-image: url('images/AdobeStock_18312078.jpeg');
+}
+
+.orchidee-noire {
+  background-image: url('images/massage-therapy-hands.jpg');
+}
+
+.or-desir {
+  background-image: url('images/spa-zen-stones.jpg');
+}
+
+.divine-jouissance {
+  background-image: url('images/shutterstock_402722113.webp');
 }
 
 /* Hours Section */
