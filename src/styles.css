@@ -1005,6 +1005,43 @@ body::after {
   text-shadow: 0 0 15px rgba(255, 183, 77, 0.3);
 }
 
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 183, 77, 0.2);
+  transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+  background: rgba(255, 183, 77, 0.1);
+  border-color: rgba(255, 183, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+.days {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+.hours {
+  font-size: 1.2rem;
+  color: #ffb74d;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(255, 183, 77, 0.3);
+}
+
 .hours-info {
   font-size: 1.5rem;
   font-weight: 400;
